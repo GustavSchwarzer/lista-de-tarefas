@@ -7,6 +7,35 @@ const taskContainer = document.querySelector(".task-container");
 
 const validateInput = () => inputElement.value.trim().length > 0;
 
+// **********************************
+    function firstText(){const taskItemContainer = document.createElement("div");
+    taskItemContainer.classList.add("task-item");
+
+    const taskContent = document.createElement("p");
+    taskContent.innerText = "Suas tarefas";
+
+    taskContent.addEventListener('click', () => handleClick(taskContent));
+
+
+    const deleteItem = document.createElement("i");
+    deleteItem.classList.add("far");
+    deleteItem.classList.add("fa-trash-alt");
+
+    taskContent.addEventListener('click', () => handleDeleteClick());
+
+    taskItemContainer.appendChild(taskContent);
+    deleteItem.addEventListener("click", () => handleDeleteClick(taskItemContainer,taskContent))
+
+    taskItemContainer.appendChild(taskContent);
+    taskItemContainer.appendChild(deleteItem);
+    taskContainer.appendChild(taskItemContainer);
+
+    inputElement.value = "";}
+    
+
+
+// **********************************
+
 
 const handleAddTask = () => {
     const inputIsValid = validateInput();
@@ -129,6 +158,8 @@ const updateLocalStorage = () => {
 
 
   refreshTasksUsinsgLocalStorage();
+
+  
 
 addTaskButton.addEventListener("click", () => handleAddTask());
 
