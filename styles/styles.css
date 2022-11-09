@@ -5,21 +5,28 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    height: 100vh;
+    
     background: linear-gradient(90deg,
     rgba( 92, 11 , 38 , 1 ) 0%,
     rgba(0 , 212 , 255 ,1 ) 100%  );
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 100%;
 }
+
+
 
 .container{
     border: 1px solid #fff;
     padding: 30px 20px;
+    margin: 30px 20px;
     width: 40%;
-    min-width: 400px;
-
+    min-width: 400px; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .new-task-container{
@@ -27,9 +34,11 @@ body{
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0 , 0.3);
+    margin-top: 10px;
     display: flex;
-   
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
 }
 
 .new-task-container input{
